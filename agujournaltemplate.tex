@@ -291,12 +291,12 @@ Tthe bottom boundary that coincides with the 660-km discontinuity is a free-slip
 %I don't think you need explain this: based on \citet{kaus2010stabilization} free surface stabilization implemented in ASPECT) 
 that can develop topography in response to the instantaneous flow in the mantle. We test a model with an additional lateral area of 5$^{\circ}$ by 5$^{\circ}$ surrounding our domain to asess boundary effects. The overall resultant velocity and stress field is similar with the smaller model domain, but the magnitude of the calculated stress and velocity field at our depth of interest, i.e. 15 km, near the boundaries is smaller by 10-15 \% as the viscous effect of the same heterogeneity is now spread over a larger area. We show only the results for the smaller domain because the seismic zones are still sufficiently far from the model domain boundaries.
 
-Static changes in Coulomb stress ($\Delta C$) between models are defined as the difference of the Coulomb Failure Function (CFF) values~\citep{king1994static}:
+Static changes in Coulomb stress ($\Delta C$) of a model are defined as the Coulomb Failure Function (CFF) values minus those of another model~\citep{king1994static}\note[EC]{Exactly why is this reference cited? Did it first suggest to look at the static change in Coulomb stress?}:
 \begin{equation}
     \Delta C = \Delta \tau - \mu' \Delta \sigma_n,
 \end{equation}
 %
-where $\Delta \tau$ (positive in the direction of slip) and $\Delta \sigma_n$ (positive when compressive) are the differences in shear and normal stresses projected onto a particular fault orientation, respectively, and $\mu'$ is the effective coefficient of friction after accounting for pore pressure. Our model results follow \annote[EC]{the right-hand rule}{Need a better description so that the following information can be easily understood. Also, please consider merging the sign convention given in the parentheses above with these.}, such that a negative sign with $\tau$ describes left-lateral and normal fault motion.
+where $\Delta \tau$ (positive in the direction of slip) and $\Delta\sigma_n$ (positive when compressive) are the differences in shear and normal stresses projected onto a particular fault orientation, respectively, and $\mu'$ is the effective coefficient of friction after accounting for pore pressure. Our model results follow \annote[EC]{the right-hand rule}{Need a better description so that the following information can be easily understood. Also, please consider merging the sign convention given in the parentheses above with these.}, such that a negative sign with $\tau$ describes left-lateral and normal fault motion.
 % High $\mu$ between 0.5 and 0.8 is associated with \annote[EC]{limited}{What do you mean?} fault cohesion and therefore, \annote[EC]{slip while lower values, i.e. 0-0.5 are generally taken for smooth sealed faults capable of larger slip accumulation}{The meaning of this sentence is not clear to me.} \citep{parsons1999stress}. 
 Since we do not have sufficient constraints on the effective friction coefficients for the faults in the study area, we use a value of 0.6 based on the study by~\citet{hurd2012intraplate}. 
 
@@ -331,9 +331,16 @@ To facilitate comparison of models with and without the foundering lithosphere d
 
 %%%
 \section{Model results}
-We calculate changes in differential ($\Delta|\sigma_1 - \sigma_3|$) and Coulomb stress ($\Delta$ C) in HT relative to HM and HR, denoted by HT$-$HM, HT$-$HR, respectively. HT$-$HM represents the stress contributions from the mantle heterogeneity deeper than 200 km, while HT$-$HR shows only the contribution of the high-velocity structure interpreted as the foundering root. 
+We calculate changes in differential ($\Delta|\sigma_1 - \sigma_3|$) and Coulomb stress ($\Delta$C) in HT relative to HM and HR, denoted by HT$-$HM, HT$-$HR, respectively. HT$-$HM represents the stress contributions from the mantle heterogeneity deeper than 200 km, while HT$-$HR shows only the contribution of the high-velocity structure interpreted as the foundering root. \note[EC]{It would be great to have an illustration or cartoon that visually conveys the purpose of taking differences. Please take a look at my quick and dirty attempt, Fig.~\ref{model_differences}.}
+%
+\begin{figure}[h!]
+    \centering
+    \includegraphics[width=\linewidth]{figures/model_differences.png}
+    \caption{Cartoon.}
+    \label{model_differences}
+\end{figure}
 
-Fig. \ref{model_results}(a) shows the computed change in differential stress for HT$-$HM (i.e., $\Delta|\sigma_1 - \sigma_3| = |\sigma_1 - \sigma_3|_{HT} - |\sigma_1 - \sigma_3|_{HM}$) at the seismogenic depth of 15 km for our model~\citep[e.g.,][]{mazzotti2010state}). Large positive values of $\Delta |\sigma_1 - \sigma_3|>15$ MPa are observed at the locations, $F_1$ and $F_2$. The seismic zones, ETSZ, SCSZ, GCSZ, CVSZ, and NMSZ, are overall correlated with positive $\Delta |\sigma_1 - \sigma_3|$ in the range of 2 to 10 MPa (\ref{model_results}b). On the other hand, differential stress changes in HT$-$HR show only a small positive values of 1 to 2 MPa in the horseshoe-shaped region surrounding the root including the ETSZ and NMSZ (\ref{model_results}b).
+\note[EC]{Although I'm afarid that it's just going back to your original idea, Please separate panels a and b, c and d into two or three separate figures. The current layout of the main result figure is awkward and inconvenient. Also, the first sentence doesn't convey much information. What do the changes in differential stress shown in this figure tell us? The thesis sentence should be an answer to this question.} Fig. \ref{model_results}(a) shows the computed change in differential stress for HT$-$HM (i.e., $\Delta|\sigma_1 - \sigma_3| = |\sigma_1 - \sigma_3|_{HT} - |\sigma_1 - \sigma_3|_{HM}$) at the seismogenic depth of 15 km for our model~\citep[e.g.,][]{mazzotti2010state}). Large positive values of $\Delta |\sigma_1 - \sigma_3|>15$ MPa are observed at the locations, $F_1$ and $F_2$. The seismic zones, ETSZ, SCSZ, GCSZ, CVSZ, and NMSZ, are overall correlated with positive $\Delta |\sigma_1 - \sigma_3|$ in the range of 2 to 10 MPa (Fig.\ref{model_results}b). On the other hand, differential stress changes in HT$-$HR show only a small positive values of 1 to 2 MPa in the horseshoe-shaped region surrounding the root including the ETSZ and NMSZ (\ref{model_results}b).
 %
 \begin{figure}[h!]
     \centering
@@ -443,9 +450,9 @@ The effects of composition at high temperature and pressure are incorporated in 
 To calculate density at high pressures, a mantle adiabat with potential temperature ($T_{pot}$) $1300^o C$ was chosen for depths $\leq$ 410 km and $1600^o C $ for deeper depths up to 660 km. Strain ($\epsilon$) is first calculated at known pressures (based on PREM model by \citet{dziewonski1981preliminary}) using $K_0$, $G_0$ and their pressure derivatives, $K_S'$, $G'$  (Table \ref{table1}).  Reference density calculated at the potential temperature and zero pressure ($\rho(T_{pot}, P_0)$) is then used to get the density $\rho (P,T)$.
 
 \begin{align*} 
-    P &=  - (1 - 2\epsilon)^{5/2} \left( 3K_0 \epsilon + \frac{1}{2} ( 9K_0 ( 4 - K_S' )) \epsilon^2 \right),\\
-    \epsilon &=  \frac{1}{2} \left[ 1 - \left( \frac{\rho(T,P)}{\rho(T_{pot}, P_0)} \right) ^{2/3} \right]\\
-    \rho(T_{pot}, P_0) &=  \rho(T_0, P_0) \text{exp} \left( - \int_{T_0}^{T_{pot}} \alpha (T) dT \right)
+    P &=  - (1 - 2\epsilon)^{5/2} \left[ 3K_0\, \epsilon + \frac{1}{2} \left( 9K_0 ( 4 - K_S' ) \right) \epsilon^2 \right], \\
+    \epsilon &= \frac{1}{2} \left[ 1 - \left( \frac{\rho(T,P)}{\rho(T_{pot}, P_0)} \right) ^{2/3} \right] \\
+    \rho(T_{pot}, P_0) &=  \rho(T_0, P_0) \, \exp \left( - \int_{T_0}^{T_{pot}} \alpha (T) dT \right)
 \end{align*}
 where thermal expansivity, $\alpha(T) = \alpha_0 + \alpha_1 T$ is truncated after the second term. Density changes due to temperature, $T$ from the reference geotherm, $T_o$ and pressure are calculated from above as:
 
