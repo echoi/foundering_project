@@ -754,8 +754,8 @@ Corresponding author: #1,
   %% table or figure
 \newlength\abovecaptionskip
 \newlength\belowcaptionskip
-\setlength\abovecaptionskip{10\p@}
-\setlength\belowcaptionskip{10\p@}
+\setlength\abovecaptionskip{8\p@}
+\setlength\belowcaptionskip{8\p@}
 
   %% to test in caption to see whether it is a figure or table
 \def\xfigure{figure}
